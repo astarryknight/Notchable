@@ -14,6 +14,9 @@
 		8C3C91B62C3479BF003414CF /* btTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C91B52C3479BF003414CF /* btTests.swift */; };
 		8C3C91C02C3479BF003414CF /* btUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C91BF2C3479BF003414CF /* btUITests.swift */; };
 		8C3C91C22C3479BF003414CF /* btUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C91C12C3479BF003414CF /* btUITestsLaunchTests.swift */; };
+		8C3C91CF2C3479E9003414CF /* bt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C91CE2C3479E9003414CF /* bt.swift */; };
+		8C3C91D32C34839F003414CF /* DynamicNotchKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C3C91D22C34839F003414CF /* DynamicNotchKit */; };
+		8C3C91D52C3483F5003414CF /* NotchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C91D42C3483F5003414CF /* NotchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,8 @@
 		8C3C91BB2C3479BF003414CF /* btUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = btUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3C91BF2C3479BF003414CF /* btUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = btUITests.swift; sourceTree = "<group>"; };
 		8C3C91C12C3479BF003414CF /* btUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = btUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8C3C91CE2C3479E9003414CF /* bt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bt.swift; sourceTree = "<group>"; };
+		8C3C91D42C3483F5003414CF /* NotchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C3C91D32C34839F003414CF /* DynamicNotchKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,8 @@
 			children = (
 				8C3C91A32C3479BE003414CF /* AppDelegate.swift */,
 				8C3C91A52C3479BE003414CF /* ViewController.swift */,
+				8C3C91D42C3483F5003414CF /* NotchManager.swift */,
+				8C3C91CE2C3479E9003414CF /* bt.swift */,
 				8C3C91A72C3479BF003414CF /* Assets.xcassets */,
 				8C3C91A92C3479BF003414CF /* Main.storyboard */,
 				8C3C91AC2C3479BF003414CF /* bt.entitlements */,
@@ -137,6 +145,9 @@
 			dependencies = (
 			);
 			name = bt;
+			packageProductDependencies = (
+				8C3C91D22C34839F003414CF /* DynamicNotchKit */,
+			);
 			productName = bt;
 			productReference = 8C3C91A02C3479BE003414CF /* bt.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 8C3C91972C3479BE003414CF;
+			packageReferences = (
+				8C3C91D12C34839F003414CF /* XCRemoteSwiftPackageReference "DynamicNotchKit" */,
+			);
 			productRefGroup = 8C3C91A12C3479BE003414CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -251,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C3C91D52C3483F5003414CF /* NotchManager.swift in Sources */,
 				8C3C91A62C3479BE003414CF /* ViewController.swift in Sources */,
+				8C3C91CF2C3479E9003414CF /* bt.swift in Sources */,
 				8C3C91A42C3479BE003414CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +444,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Notchable;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "$(PRODUCT_NAME) alerts when bluetooth devices connect";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -453,6 +472,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Notchable;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "$(PRODUCT_NAME) alerts when bluetooth devices connect";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -576,6 +598,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C3C91D12C34839F003414CF /* XCRemoteSwiftPackageReference "DynamicNotchKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MrKai77/DynamicNotchKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C3C91D22C34839F003414CF /* DynamicNotchKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C3C91D12C34839F003414CF /* XCRemoteSwiftPackageReference "DynamicNotchKit" */;
+			productName = DynamicNotchKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8C3C91982C3479BE003414CF /* Project object */;
 }
