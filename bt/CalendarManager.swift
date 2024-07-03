@@ -34,7 +34,7 @@ class CalendarManager{
 
         // Create the end date components.
         var oneYearFromNowComponents = DateComponents()
-        oneYearFromNowComponents.year = 1
+        oneYearFromNowComponents.day = 7
         var oneYearFromNow = calendar.date(byAdding: oneYearFromNowComponents, to: Date(), wrappingComponents: false)
 
 
@@ -56,5 +56,9 @@ class CalendarManager{
             }
         }
         print(upcomingEvents)
+    }
+    func getNextEvent(){
+        self.getUpcomingEvents()
+        print(upcomingEvents[0].title!)
     }
 }

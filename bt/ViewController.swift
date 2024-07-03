@@ -27,7 +27,7 @@ class ViewController: NSViewController {
         store.requestFullAccessToEvents { granted, error in
             // Reload the event store and request events after permission is granted
             self.store = EKEventStore()
-            self.cm.getUpcomingEvents()
+            self.cm.getNextEvent()
         }
         
         //init bluetooth variables
