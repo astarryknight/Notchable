@@ -22,7 +22,7 @@ class CalendarManager{
         let minutes = calendar.component(.minute, from: date)
         print("today is: \(day), \(hour), \(minutes)")
     }
-    func getUpcomingEvents() -> [EKEvent]? /*not sure i can acc do this tho*/{
+    func getUpcomingEvents(){
         // Get the appropriate calendar.
         var calendar = Calendar.current
 
@@ -50,6 +50,11 @@ class CalendarManager{
         if let aPredicate = predicate {
             events = store.events(matching: aPredicate)
         }
-        return events
+        for item in events!{
+            if !upcomingEvents.contains(item){
+                upcomingEvents.append(item)
+            }
+        }
+        print(upcomingEvents)
     }
 }

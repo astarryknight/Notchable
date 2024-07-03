@@ -25,10 +25,10 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         //init calendar permissions
         store.requestFullAccessToEvents { granted, error in
-            // Handle the response to the request.
+            // Reload the event store and request events after permission is granted
+            self.store = EKEventStore()
+            self.cm.getUpcomingEvents()
         }
-        
-        cm.getCurrentDay()
         
         //init bluetooth variables
         oldList = bt.getConnectedDevices()
