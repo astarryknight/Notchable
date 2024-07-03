@@ -12,16 +12,10 @@ import EventKit
 class CalendarManager{
     
     var upcomingEvents = [EKEvent]()
+    var alertedEvents = [EKEvent]()
     var store = EKEventStore()
+    var nm = NotchManager()
     
-    func getCurrentDay(){
-        let date = Date()
-        let calendar = Calendar.current
-        let day = calendar.component(.day, from: date)
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
-        print("today is: \(day), \(hour), \(minutes)")
-    }
     func getUpcomingEvents(){
         // Get the appropriate calendar.
         var calendar = Calendar.current
@@ -55,10 +49,29 @@ class CalendarManager{
                 upcomingEvents.append(item)
             }
         }
-        print(upcomingEvents)
+        //print(upcomingEvents)
     }
-    func getNextEvent(){
+    func getNextEvent() -> EKEvent{
         self.getUpcomingEvents()
-        print(upcomingEvents[0].title!)
+        return upcomingEvents[0]
+    }
+    func checkEventAlert(){
+        self.getUpcomingEvents()
+        let date = Date()
+        let calendar = Calendar.current
+        if (calendar.component(.day, from: date)==calendar.component(.day, from:upcomingEvents[0].startDate)) &&
+            (calendar.component(.month, from: date)==calendar.component(.month, from:upcomingEvents[0].startDate)){
+            if !(alertedEvents.contains(upcomingEvents[0])){
+                alertEvent()
+            }
+        }
+    }
+    
+    func alertEvent(){
+        alertedEvents.append(upcomingEvents[0])
+    }
+    
+    func testEvent(){
+        self.getUpcomingEvents()
     }
 }

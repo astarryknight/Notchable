@@ -7,6 +7,7 @@
 
 import Foundation
 import DynamicNotchKit
+import EventKit
 
 class NotchManager{
     
@@ -32,6 +33,11 @@ class NotchManager{
             sysImg="headphones"
         }
         notch.setContent(systemImage: sysImg, title: name, description: description)
+        notch.show(for: 2)
+    }
+    
+    func showEvent(event: EKEvent){
+        notch.setContent(systemImage: "calendar", title: event.title, description: "IN 10 MINUTES")
         notch.show(for: 2)
     }
 }
