@@ -27,8 +27,6 @@ class ViewController: NSViewController {
         store.requestFullAccessToEvents { granted, error in
             // Reload the event store and request events after permission is granted
             self.store = EKEventStore()
-            print(self.cm.getNextEvent().title)
-            //print(a)
         }
         
         //init bluetooth variables
@@ -37,6 +35,9 @@ class ViewController: NSViewController {
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
             self.checkDevices()
         })
+        
+        //show test event
+        self.nm.showEvent(event: self.cm.getNextEvent())
     }
 
     func checkDevices(){
