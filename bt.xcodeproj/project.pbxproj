@@ -17,6 +17,7 @@
 		8C3C91CF2C3479E9003414CF /* bt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C91CE2C3479E9003414CF /* bt.swift */; };
 		8C3C91D32C34839F003414CF /* DynamicNotchKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C3C91D22C34839F003414CF /* DynamicNotchKit */; };
 		8C3C91D52C3483F5003414CF /* NotchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C91D42C3483F5003414CF /* NotchManager.swift */; };
+		8C3C91D72C358826003414CF /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C91D62C358826003414CF /* CalendarManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		8C3C91C12C3479BF003414CF /* btUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = btUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8C3C91CE2C3479E9003414CF /* bt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bt.swift; sourceTree = "<group>"; };
 		8C3C91D42C3483F5003414CF /* NotchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchManager.swift; sourceTree = "<group>"; };
+		8C3C91D62C358826003414CF /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				8C3C91A32C3479BE003414CF /* AppDelegate.swift */,
 				8C3C91A52C3479BE003414CF /* ViewController.swift */,
+				8C3C91D62C358826003414CF /* CalendarManager.swift */,
 				8C3C91D42C3483F5003414CF /* NotchManager.swift */,
 				8C3C91CE2C3479E9003414CF /* bt.swift */,
 				8C3C91A72C3479BF003414CF /* Assets.xcassets */,
@@ -267,6 +270,7 @@
 			files = (
 				8C3C91D52C3483F5003414CF /* NotchManager.swift in Sources */,
 				8C3C91A62C3479BE003414CF /* ViewController.swift in Sources */,
+				8C3C91D72C358826003414CF /* CalendarManager.swift in Sources */,
 				8C3C91CF2C3479E9003414CF /* bt.swift in Sources */,
 				8C3C91A42C3479BE003414CF /* AppDelegate.swift in Sources */,
 			);
@@ -444,9 +448,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Notchable;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "$(PRODUCT_NAME) alerts when bluetooth devices connect";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "$(PRODUCT_NAME) gives a calendar overview";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -472,9 +475,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Notchable;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "$(PRODUCT_NAME) alerts when bluetooth devices connect";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "$(PRODUCT_NAME) gives a calendar overview";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;

@@ -14,6 +14,7 @@ class ViewController: NSViewController {
 
     var bt = BluetoothDevices()
     var nm = NotchManager()
+    var cm = CalendarManager()
     var store = EKEventStore()
     var timer = Timer()
     var oldList = [String]()
@@ -26,6 +27,8 @@ class ViewController: NSViewController {
         store.requestFullAccessToEvents { granted, error in
             // Handle the response to the request.
         }
+        
+        cm.getCurrentDay()
         
         //init bluetooth variables
         oldList = bt.getConnectedDevices()
@@ -62,39 +65,6 @@ class ViewController: NSViewController {
             print(bt.getConnectedDevices())
         }
         oldList=newList
-        
-        //handle calendar events - if event is around 10 mins lets say - since it runs every second, gotta be careful to not make it run over itself lol
-    }
-    
-    func fetchCalendarEvents() -> [EKEvent]? /*not sure i can acc do this tho*/{
-        // Get the appropriate calendar.
-        var calendar = Calendar.current
-
-        // Create the start date components
-        var oneDayAgoComponents = DateComponents()
-        oneDayAgoComponents.day = -1
-        var oneDayAgo = calendar.date(byAdding: oneDayAgoComponents, to: Date(), wrappingComponents: false)
-
-
-        // Create the end date components.
-        var oneYearFromNowComponents = DateComponents()
-        oneYearFromNowComponents.year = 1
-        var oneYearFromNow = calendar.date(byAdding: oneYearFromNowComponents, to: Date(), wrappingComponents: false)
-
-
-        // Create the predicate from the event store's instance method.
-        var predicate: NSPredicate? = nil
-        if let anAgo = oneDayAgo, let aNow = oneYearFromNow {
-            predicate = store.predicateForEvents(withStart: anAgo, end: aNow, calendars: nil)
-        }
-
-
-        // Fetch all events that match the predicate.
-        var events: [EKEvent]? = nil
-        if let aPredicate = predicate {
-            events = store.events(matching: aPredicate)
-        }
-        return events
     }
 }
 
