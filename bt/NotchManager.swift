@@ -8,6 +8,7 @@
 import Foundation
 import DynamicNotchKit
 import EventKit
+import SwiftUI
 
 class NotchManager{
     
@@ -39,5 +40,10 @@ class NotchManager{
     func showEvent(event: EKEvent){
         notch.setContent(systemImage: "calendar", title: event.title, description: "IN 10 MINUTES")
         notch.show(for: 2)
+    }
+    
+    func showCalendar(currentEvents: [EKEvent?]){
+        var n = DynamicNotch(content: CalendarView(currentEvents: currentEvents))
+        n.show(for: 2)
     }
 }

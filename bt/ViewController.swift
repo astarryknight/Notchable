@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     var bt = BluetoothDevices()
     var nm = NotchManager()
     var cm = CalendarManager()
+    //var dn = DynamicNotch(content: CalendarView())
     var store = EKEventStore()
     var timer = Timer()
     var oldList = [String]()
@@ -32,22 +33,26 @@ class ViewController: NSViewController {
         //init bluetooth variables
         oldList = bt.getConnectedDevices()
         newList = bt.getConnectedDevices()
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+        self.timer = Timer.scheduledTimer(withTimeInterval: 2.25, repeats: true, block: { _ in
             self.checkDevices()
         })
-        
         //show test event
-        self.nm.showEvent(event: self.cm.getNextEvent())
+        //self.nm.showEvent(event: self.cm.getNextEvent())
     }
 
     func checkDevices(){
+        
+        if DynamicNotch.checkIfMouseIsInNotch(){
+            nm.showCalendar(currentEvents: cm.getCurrentEvents())
+        }
+        
         newList=bt.getConnectedDevices()
         if(!(newList==oldList)){
             /*new device connected*/
             if(newList.count>oldList.count){
                 for i in 0...newList.count{
                     if(!oldList.contains(newList[i])){
-                        print("\(newList[i]) connected!")
+                        //print("\(newList[i]) connected!")
                         nm.showBT(name: newList[i], description: "CONNECTED")
                         break
                     }
@@ -57,16 +62,15 @@ class ViewController: NSViewController {
             else{
                 for i in 0...oldList.count{
                     if(!newList.contains(oldList[i])){
-                        print("\(oldList[i]) disconnected!")
+                        //print("\(oldList[i]) disconnected!")
                         nm.showBT(name: oldList[i], description: "DISCONNECTED")
                         break
                     }
                 }
             }
         } else{
-            print(bt.getConnectedDevices())
+            //print(bt.getConnectedDevices())
         }
         oldList=newList
     }
 }
-

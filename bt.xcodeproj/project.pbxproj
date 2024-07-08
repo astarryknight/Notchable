@@ -18,6 +18,8 @@
 		8C3C91D32C34839F003414CF /* DynamicNotchKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C3C91D22C34839F003414CF /* DynamicNotchKit */; };
 		8C3C91D52C3483F5003414CF /* NotchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C91D42C3483F5003414CF /* NotchManager.swift */; };
 		8C3C91D72C358826003414CF /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C91D62C358826003414CF /* CalendarManager.swift */; };
+		8C3C91D92C359AA7003414CF /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C91D82C359AA7003414CF /* CalendarView.swift */; };
+		8C3C92122C35ADC3003414CF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C92112C35ADC3003414CF /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8C3C919F2C3479BE003414CF;
 			remoteInfo = bt;
+		};
+		8C3C92282C360F45003414CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C3C91982C3479BE003414CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C3C92162C360F44003414CF;
+			remoteInfo = Notchable;
+		};
+		8C3C92322C360F46003414CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C3C91982C3479BE003414CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C3C92162C360F44003414CF;
+			remoteInfo = Notchable;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -52,6 +68,11 @@
 		8C3C91CE2C3479E9003414CF /* bt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bt.swift; sourceTree = "<group>"; };
 		8C3C91D42C3483F5003414CF /* NotchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchManager.swift; sourceTree = "<group>"; };
 		8C3C91D62C358826003414CF /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		8C3C91D82C359AA7003414CF /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		8C3C92112C35ADC3003414CF /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		8C3C92172C360F44003414CF /* Notchable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notchable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C3C92272C360F45003414CF /* NotchableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotchableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C3C92312C360F46003414CF /* NotchableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotchableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +98,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C3C92142C360F44003414CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C3C92242C360F45003414CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C3C922E2C360F46003414CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,6 +138,9 @@
 				8C3C91A02C3479BE003414CF /* bt.app */,
 				8C3C91B12C3479BF003414CF /* btTests.xctest */,
 				8C3C91BB2C3479BF003414CF /* btUITests.xctest */,
+				8C3C92172C360F44003414CF /* Notchable.app */,
+				8C3C92272C360F45003414CF /* NotchableTests.xctest */,
+				8C3C92312C360F46003414CF /* NotchableUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +148,8 @@
 		8C3C91A22C3479BE003414CF /* bt */ = {
 			isa = PBXGroup;
 			children = (
+				8C3C91D82C359AA7003414CF /* CalendarView.swift */,
+				8C3C92112C35ADC3003414CF /* DateExtension.swift */,
 				8C3C91A32C3479BE003414CF /* AppDelegate.swift */,
 				8C3C91A52C3479BE003414CF /* ViewController.swift */,
 				8C3C91D62C358826003414CF /* CalendarManager.swift */,
@@ -191,6 +238,59 @@
 			productReference = 8C3C91BB2C3479BF003414CF /* btUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		8C3C92162C360F44003414CF /* Notchable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C3C92392C360F46003414CF /* Build configuration list for PBXNativeTarget "Notchable" */;
+			buildPhases = (
+				8C3C92132C360F44003414CF /* Sources */,
+				8C3C92142C360F44003414CF /* Frameworks */,
+				8C3C92152C360F44003414CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Notchable;
+			productName = Notchable;
+			productReference = 8C3C92172C360F44003414CF /* Notchable.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C3C92262C360F45003414CF /* NotchableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C3C923C2C360F46003414CF /* Build configuration list for PBXNativeTarget "NotchableTests" */;
+			buildPhases = (
+				8C3C92232C360F45003414CF /* Sources */,
+				8C3C92242C360F45003414CF /* Frameworks */,
+				8C3C92252C360F45003414CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C3C92292C360F45003414CF /* PBXTargetDependency */,
+			);
+			name = NotchableTests;
+			productName = NotchableTests;
+			productReference = 8C3C92272C360F45003414CF /* NotchableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8C3C92302C360F46003414CF /* NotchableUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C3C923F2C360F46003414CF /* Build configuration list for PBXNativeTarget "NotchableUITests" */;
+			buildPhases = (
+				8C3C922D2C360F46003414CF /* Sources */,
+				8C3C922E2C360F46003414CF /* Frameworks */,
+				8C3C922F2C360F46003414CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C3C92332C360F46003414CF /* PBXTargetDependency */,
+			);
+			name = NotchableUITests;
+			productName = NotchableUITests;
+			productReference = 8C3C92312C360F46003414CF /* NotchableUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,6 +311,17 @@
 					8C3C91BA2C3479BF003414CF = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 8C3C919F2C3479BE003414CF;
+					};
+					8C3C92162C360F44003414CF = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					8C3C92262C360F45003414CF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 8C3C92162C360F44003414CF;
+					};
+					8C3C92302C360F46003414CF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 8C3C92162C360F44003414CF;
 					};
 				};
 			};
@@ -233,6 +344,9 @@
 				8C3C919F2C3479BE003414CF /* bt */,
 				8C3C91B02C3479BF003414CF /* btTests */,
 				8C3C91BA2C3479BF003414CF /* btUITests */,
+				8C3C92162C360F44003414CF /* Notchable */,
+				8C3C92262C360F45003414CF /* NotchableTests */,
+				8C3C92302C360F46003414CF /* NotchableUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -261,6 +375,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C3C92152C360F44003414CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C3C92252C360F45003414CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C3C922F2C360F46003414CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -269,7 +404,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C3C91D52C3483F5003414CF /* NotchManager.swift in Sources */,
+				8C3C92122C35ADC3003414CF /* DateExtension.swift in Sources */,
 				8C3C91A62C3479BE003414CF /* ViewController.swift in Sources */,
+				8C3C91D92C359AA7003414CF /* CalendarView.swift in Sources */,
 				8C3C91D72C358826003414CF /* CalendarManager.swift in Sources */,
 				8C3C91CF2C3479E9003414CF /* bt.swift in Sources */,
 				8C3C91A42C3479BE003414CF /* AppDelegate.swift in Sources */,
@@ -293,6 +430,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C3C92132C360F44003414CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C3C92232C360F45003414CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C3C922D2C360F46003414CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -305,6 +463,16 @@
 			isa = PBXTargetDependency;
 			target = 8C3C919F2C3479BE003414CF /* bt */;
 			targetProxy = 8C3C91BC2C3479BF003414CF /* PBXContainerItemProxy */;
+		};
+		8C3C92292C360F45003414CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C3C92162C360F44003414CF /* Notchable */;
+			targetProxy = 8C3C92282C360F45003414CF /* PBXContainerItemProxy */;
+		};
+		8C3C92332C360F46003414CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C3C92162C360F44003414CF /* Notchable */;
+			targetProxy = 8C3C92322C360F46003414CF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -324,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -387,6 +556,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=*]" = Icon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -441,7 +612,7 @@
 		8C3C91C62C3479BF003414CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = bt/bt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,7 +639,7 @@
 		8C3C91C72C3479BF003414CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = bt/bt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -560,6 +731,120 @@
 			};
 			name = Release;
 		};
+		8C3C923A2C360F46003414CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Notchable/Notchable.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Notchable/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "starry-knight.Notchable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8C3C923B2C360F46003414CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Notchable/Notchable.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Notchable/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "starry-knight.Notchable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8C3C923D2C360F46003414CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "starry-knight.NotchableTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notchable.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Notchable";
+			};
+			name = Debug;
+		};
+		8C3C923E2C360F46003414CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "starry-knight.NotchableTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notchable.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Notchable";
+			};
+			name = Release;
+		};
+		8C3C92402C360F46003414CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "starry-knight.NotchableUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Notchable;
+			};
+			name = Debug;
+		};
+		8C3C92412C360F46003414CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "starry-knight.NotchableUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Notchable;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -595,6 +880,33 @@
 			buildConfigurations = (
 				8C3C91CC2C3479BF003414CF /* Debug */,
 				8C3C91CD2C3479BF003414CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C3C92392C360F46003414CF /* Build configuration list for PBXNativeTarget "Notchable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C3C923A2C360F46003414CF /* Debug */,
+				8C3C923B2C360F46003414CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C3C923C2C360F46003414CF /* Build configuration list for PBXNativeTarget "NotchableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C3C923D2C360F46003414CF /* Debug */,
+				8C3C923E2C360F46003414CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C3C923F2C360F46003414CF /* Build configuration list for PBXNativeTarget "NotchableUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C3C92402C360F46003414CF /* Debug */,
+				8C3C92412C360F46003414CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
