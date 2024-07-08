@@ -12,7 +12,7 @@ Whenever a new device connects to your mac, you will be notified with a notifica
 By moving the mouse cursor into the notch, you can bring up a calendar preview. It will show you the current month, the current day, and the upcoming events for the current day.
 
 ## Installation
-Download the latest release from the [releases page]() and place the file in your Applications folder.
+Download the latest release from the [releases page](https://github.com/astarryknight/Notchable/releases/tag/Latest) and place the file in your Applications folder.
 
 ## Uninstallation
 Simply delete the app from your Applications folder.
