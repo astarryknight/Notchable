@@ -130,20 +130,29 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="bt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="552"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="261"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g6H-5l-pze">
-                                <rect key="frame" x="190" y="520" width="96" height="22"/>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NvT-26-pxb">
+                                <rect key="frame" x="103" y="203" width="50" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" title="Preferences" id="jb6-WE-aRf">
-                                    <font key="font" size="18" name="AppleSDGothicNeo-SemiBold"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" title="Views" id="OHJ-cL-SRW">
+                                    <font key="font" size="17" name="AppleSDGothicNeo-SemiBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HF2-xe-24e">
+                                <rect key="frame" x="323" y="203" width="50" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" title="Alerts" id="bNx-WZ-5WV">
+                                    <font key="font" size="17" name="AppleSDGothicNeo-SemiBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2j4-z8-Y3r">
-                                <rect key="frame" x="131" y="175" width="207" height="24"/>
+                                <rect key="frame" x="245" y="43" width="207" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="2vc-mg-xbL">
                                     <font key="font" metaFont="system"/>
@@ -153,12 +162,12 @@
                                     </segments>
                                 </segmentedCell>
                             </segmentedControl>
-                            <splitView fixedFrame="YES" arrangesAllSubviews="NO" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSg-mW-wk1">
-                                <rect key="frame" x="17" y="378" width="446" height="136"/>
+                            <splitView fixedFrame="YES" arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSg-mW-wk1">
+                                <rect key="frame" x="17" y="79" width="446" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <customView fixedFrame="YES" id="hei-Sd-8Ip">
-                                        <rect key="frame" x="0.0" y="0.0" width="219" height="136"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="v0q-UA-AE4">
@@ -203,7 +212,7 @@
                                         </subviews>
                                     </customView>
                                     <customView fixedFrame="YES" id="cnd-Bj-dI5">
-                                        <rect key="frame" x="228" y="0.0" width="218" height="136"/>
+                                        <rect key="frame" x="226" y="0.0" width="220" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="uhv-An-TXt">
@@ -253,12 +262,59 @@
                                     <real value="250"/>
                                 </holdingPriorities>
                             </splitView>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g6H-5l-pze">
+                                <rect key="frame" x="190" y="229" width="100" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" title="Preferences" id="jb6-WE-aRf">
+                                    <font key="font" size="18" name="AppleSDGothicNeo-Bold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJ3-4B-Kdh">
+                                <rect key="frame" x="29" y="44" width="93" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" title="Optimize for:" id="pqw-ef-RgN">
+                                    <font key="font" size="16" name="AppleSDGothicNeo-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pl-Kp-ghm">
+                                <rect key="frame" x="31" y="15" width="89" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" title="Notch delay:" id="cAN-3V-5DN">
+                                    <font key="font" size="16" name="AppleSDGothicNeo-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNj-7H-j5x">
+                                <rect key="frame" x="247" y="15" width="65" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="WAU-qN-qR7">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" formatWidth="-1" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="42" id="hjS-R3-K1b"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gUz-Ou-mx4">
+                                <rect key="frame" x="318" y="15" width="59" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" title="seconds" id="OXw-Sa-20A">
+                                    <font key="font" size="16" name="AppleSDGothicNeo-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="dmv-cB-Nfb"/>
             </objects>
-            <point key="canvasLocation" x="75" y="796"/>
+            <point key="canvasLocation" x="75" y="650.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XJU-AL-XCX">
